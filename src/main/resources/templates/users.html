@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>* Users *</title>
+</head>
+<body>
+****** User's list ******
+<br>
+id | name    |last name| age
+<div class="container">
+    <div class="row">
+        <table>
+            <tr th:each = "user : ${users}">
+                <td th:text="${user.getId()}">VALUE</td>
+                <td th:text="${user.getName()}">VALUE</td>
+                <td th:text="${user.getLastName()}">VALUE</td>
+                <td th:text="${user.getAge()}">VALUE</td>
+                <td><a th:href="@{update/{id}(id=${user.id})}">Update</a></td>
+                <td><a th:href="@{delete/{id}(id=${user.id})}">Delete</a></td>
+
+            </tr>
+        </table>
+    </div>
+    <p><a href="/create">Create user</a></p>
+
+</div>
+</body>
+</html>
