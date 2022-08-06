@@ -14,18 +14,19 @@ public class User implements Serializable {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "lastName")
-    private String lastName;
+    @Column(name = "password")
+    private String password;
 
     @Column(name = "age")
     private byte age;
 
+
     public User() {
     }
 
-    public User(String name, String lastName, byte age) {
+    public User(String name, String password, byte age) {
         this.name = name;
-        this.lastName = lastName;
+        this.password = password;
         this.age = age;
     }
 
@@ -45,12 +46,12 @@ public class User implements Serializable {
         this.name = name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLast_name() {
+        return password;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLast_name(String lastName) {
+        this.password = lastName;
     }
 
     public byte getAge() {
